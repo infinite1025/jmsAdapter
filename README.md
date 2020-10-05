@@ -10,7 +10,7 @@ Parámetros de sistema
 /system-property=jms.queue.manager.port:add(value=1425)
 /system-property=jms.queue.name:add(value=QL....RESP)
 
-Parámetros deñ EJB3
+Parámetros del EJB3
 =====================
 /subsystem=ejb3:write-attribute(name=default-resource-adapter-name, value=wmq.jmsra.rar)
 /subsystem=ejb3:write-attribute(name=enable-statistics, value=true)
