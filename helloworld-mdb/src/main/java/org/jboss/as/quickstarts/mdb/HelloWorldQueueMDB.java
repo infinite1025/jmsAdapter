@@ -41,6 +41,8 @@ public class HelloWorldQueueMDB implements MessageListener {
   	public void onMessage(Message rcvMessage) {
 		TextMessage msg = null;
 		try {
+			String msjOut = JMSConfig.send();
+			System.out.println(msjOut);
 			if (rcvMessage instanceof TextMessage) {
 				msg = (TextMessage) rcvMessage;
 				LOGGER.info("Received Message from queue: " + msg.getText());
@@ -48,7 +50,7 @@ public class HelloWorldQueueMDB implements MessageListener {
 				LOGGER.info("Message of wrong type: "
 						+ rcvMessage.getClass().getName());
 			}
-		} catch (JMSException e) {
+		} catch (JMSException | NamingException e) {
 			LOGGER.info("interrupted");
 			throw new RuntimeException(e);
 			

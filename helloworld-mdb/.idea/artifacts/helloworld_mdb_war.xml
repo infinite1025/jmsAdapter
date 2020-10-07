@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helloworld-mdb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helloworld-mdb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helloworld-mdb.war">
+      <element id="artifact" artifact-name="helloworld-mdb:war exploded" />
+    </root>
+  </artifact>
+</component>
